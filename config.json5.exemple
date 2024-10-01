@@ -1,0 +1,37 @@
+{
+    baseUrl: "", // url de base de crafty controle
+    servers: [ // liste des serveurs
+        {
+            name: "survie",// nom du serveur
+            id: "1",// id du serveur (trouvable dans l'url de crafty controle)
+            action: [// liste des actions a effectuer
+                {
+                    name: "démarez",// nom de l'action
+                    type: "start",// type de l'action (start, stop, restart, command, backup)
+                    command: "start_server",// commande a executer (si type = command)
+                },
+                {
+                    name: "arrêtez",
+                    type: "stop",
+                    command: "stop_server",
+                },
+                {
+                    name: "redémarrez",
+                    type: "restart",
+                    command: "restart_server",
+                },
+                {
+                    name: "backup",
+                    type: "backup",
+                    command: "backup_server",
+                },
+                {
+                    name: "Anonce-Restart",
+                    type: "command",
+                    command: "say restart dans 5 minutes",
+                }
+            ]
+        }
+    ],
+    guildId: "",// id du serveur discord
+}
